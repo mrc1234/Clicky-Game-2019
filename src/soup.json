@@ -1,31 +1,19 @@
 [
     {
         "type": "bowlsoup",
-        "image": "https://soup.ceo/api/img/bowlsoup-boston/n02096585_1737.jpg"
+        "image": "../img/eggs.jpg"
+        
     },
     {
         "type": "pea",
-        "image": "https://soup.ceo/api/img/beagle/n02088364_13050.jpg"
+        "image": "../img/hot.jpg"
     },
     {
         "type": "tomato",
-        "image": "https://soup.ceo/api/img/tomato/n02110185_14523.jpg"
+        "image": "../img/veggies.jpg"
     },
     {
         "type": "barley",
-        "image": "https://soup.ceo/api/img/barley/n02085936_10197.jpg"
-    },
-    {
-        "type": "noodle",
-        "image": "https://soup.ceo/api/img/noodle/n02112018_13636.jpg"
-    },
-    {
-        "type": "egg-drop",
-        "image": "https://soup.ceo/api/img/egg-drop/n02113712_1088.jpg"
-    },
-    {
-        "type": "miso",
-        "image": "https://soup.ceo/api/img/miso/n02111500_395.jpg"
-    },
-    {
-     
+        "image": "../img/cambells.jpg"
+    }
+]

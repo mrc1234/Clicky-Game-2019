@@ -4,7 +4,6 @@ import soup from './soup.json'
 import Wrapper from './components/Wrapper'
 import Navpills from './components/Navpills'
 import Title from './components/Title'
-import SoupCard from './components/SoupCard'
 import SoupCard from './components/SoupCard';
 
 class App extends Component {
@@ -15,8 +14,9 @@ class App extends Component {
         soup: soup,
         unselectedsoup: soup
     }
-
+    // thinking the soup array is reading the letters in the array instead of the soup array
     componentDidMount() {
+        console.log(soup);
     }
 
     shuffleArray = array => {
@@ -29,9 +29,9 @@ class App extends Component {
     selectSoup = soup => {
         const findSoup = this.state.unselectedsoup.find(item => item.soup === soup);
 
-        if(findSoup === undefined) {
+        if (findSoup === undefined) {
             // failure to select a new soup
-            this.setState({ 
+            this.setState({
                 message: "You guessed incorrectly!",
                 topScore: (this.state.curScore > this.state.topScore) ? this.state.curScore : this.state.topScore,
                 curScore: 0,
@@ -42,15 +42,15 @@ class App extends Component {
         else {
             // success to select a new soup
             const newsoup = this.state.unselectedsoup.filter(item => item.soup !== soup);
-            
-            this.setState({ 
+
+            this.setState({
                 message: "You guessed correctly!",
                 curScore: this.state.curScore + 1,
                 soup: soup,
                 unselectedsoup: newsoup
             });
         }
-
+console.log(soup);
         this.shuffleArray(soup);
     };
 
@@ -64,11 +64,11 @@ class App extends Component {
                 />
                 <Title />
                 {
-                    this.state.soup.map(soup => (
+                    this.state.soup.map(s => (
                         <SoupCard
-                            soup={soup.soup}
-                            image={soup.image}
-                            selectSoup={this.selectSoup} 
+                            theSoup={s.type}
+                            image={s.image}
+                            selectSoup={this.selectSoup}
                             curScore={this.state.curScore}
                         />
                     ))
